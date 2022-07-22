@@ -89,7 +89,7 @@ TypeMatchups:
 	db FLYING,       FIRE,         SUPER_EFFECTIVE
 	db BUG,          STEEL,        NOT_VERY_EFFECTIVE
 	db BUG,          TECH,         SUPER_EFFECTIVE
-	db BUG,          PSYCHIC_TYPE  SUPER_EFFECTIVE
+	db BUG,          PSYCHIC_TYPE, SUPER_EFFECTIVE
 	db ROCK,         FIRE,         SUPER_EFFECTIVE
 	db ROCK,         ICE,          SUPER_EFFECTIVE
 	db ROCK,         FIGHTING,     NOT_VERY_EFFECTIVE
