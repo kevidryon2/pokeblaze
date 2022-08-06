@@ -3,7 +3,7 @@
 	db  60,  95,  80,  30,  60,  80
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, GHOST ; type
+	db GHOST, POISON ; type
 	db 75 ; catch rate
 	db 128 ; base exp
 	db TINYMUSHROOM, BIG_MUSHROOM ; items

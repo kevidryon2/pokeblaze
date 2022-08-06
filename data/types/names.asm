@@ -7,9 +7,7 @@ TypeNames:
 	dw Poison
 	dw Ground
 	dw Rock
-	dw Bird
 	dw Bug
-	dw Ghost
 	dw Steel
 	assert_table_length UNUSED_TYPES
 	dw Normal
@@ -32,8 +30,11 @@ TypeNames:
 	dw Dragon
 	dw Dark
 	dw Tech
+	dw Ghost
+	dw Fairy
 	assert_table_length TYPES_END
 
+Fairy:     db "FAIRY@"
 Normal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
 Flying:    db "FLYING@"

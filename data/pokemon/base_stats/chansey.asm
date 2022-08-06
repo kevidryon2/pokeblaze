@@ -3,7 +3,7 @@
 	db 250,  05,  05,  50,  35, 105
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type (replace 2nd with fairy)
+	db NORMAL, FAIRY ; type (replace 2nd with fairy)
 	db 30 ; catch rate
 	db 255 ; base exp
 	db NO_ITEM, LUCKY_EGG ; items

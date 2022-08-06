@@ -19,4 +19,5 @@ PokedexTypeSearchConversionTable:
 	db DARK
 	db STEEL
 	db TECH
-	assert_table_length NUM_TYPES
+	db FAIRY
+	assert_table_length NUM_TYPES+1

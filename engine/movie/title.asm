@@ -87,7 +87,7 @@ _TitleScreen:
 	ld a, 0
 	call ByteFill
 
-; 'CRYSTAL VERSION'
+; 'B   L   A   Z   E'
 	hlbgcoord 5, 8
 	ld bc, 11 ; length of version text
 	ld a, 1
@@ -236,12 +236,12 @@ SuicuneFrameIterator:
 	inc [hl]
 
 ; Only do this once every eight frames
-	and %111
+	and %010
 	ret nz
 
 	ld a, c
 	and %11000
-	sla a
+	sra a
 	swap a
 	ld e, a
 	ld d, 0
