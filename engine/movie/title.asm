@@ -94,8 +94,8 @@ _TitleScreen:
 	call ByteFill
 
 ; Suicune gfx
-	hlbgcoord 0, 12
-	ld bc, 6 * BG_MAP_WIDTH ; the rest of the screen
+	hlbgcoord 1, 10
+	ld bc, 8 * BG_MAP_WIDTH ; the rest of the screen
 	ld a, 0 | VRAM_BANK_1
 	call ByteFill
 
@@ -241,7 +241,7 @@ SuicuneFrameIterator:
 
 	ld a, c
 	and %11000
-	sra a
+	sla a
 	swap a
 	ld e, a
 	ld d, 0
@@ -264,8 +264,8 @@ SuicuneFrameIterator:
 	db $08 ; vTiles5 tile $08
 
 LoadSuicuneFrame:
-	hlcoord 6, 12
-	ld b, 6
+	hlcoord 6, 10
+	ld b, 10
 .bgrows
 	ld c, 8
 .col
@@ -333,7 +333,7 @@ InitializeBackground:
 	ret
 
 .InitColumn:
-	ld c, $6
+	ld c, $8
 	ld b, $40
 .loop2
 	ld a, d
@@ -377,7 +377,7 @@ endr
 	ret
 
 TitleSuicuneGFX:
-INCBIN "gfx/title/suicune.2bpp.lz"
+INCBIN "gfx/title/karmor.2bpp.lz"
 
 TitleLogoGFX:
 INCBIN "gfx/title/logo.2bpp.lz"

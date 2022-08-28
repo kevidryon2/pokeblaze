@@ -1533,3 +1533,82 @@ _MomLostGearBookletText::
 	para "Come back again in"
 	line "a while."
 	prompt
+	
+	
+	
+_KevinKarmorAwokenText::
+    text "It's KARMOR…"
+    
+    para "<PLAYER>, if you"
+    line "don't stop him now,"
+    cont "he will burn Katan"
+    line "to ashes!"
+    prompt
+    
+_KevinBeforeChampionBattleText::
+    text "I've been waiting"
+    line "for you, <PLAYER>."
+    
+    para "Even since the day"
+    line "you defeated PYRE"
+    cont "and saved Katan."
+    
+    para "Though, You still"
+    line "have one more"
+    cont "challenge."
+    
+    para "And that is I!"
+    
+    para "Show me your"
+    line "strategy!"
+    
+    prompt
+    
+_KevinAfterChampionBattleText::
+    text "You and your"
+    line "#MON managed to"
+    cont "defeat the"
+    cont "champion!"
+    
+    para "You are a master"
+    line "of strategy!"
+    
+    para "This battle was"
+    line "the most epic"
+    cont "and intense one"
+    cont "i've seen yet…"
+    
+    para "aside from the"
+    line "one you had"
+    cont "against PYRE,"
+    cont "of course!"
+    
+    para "You saved Vulka…"
+    line "no, all of Katan"
+    cont "from annihilation!"
+    
+    prompt
+    
+_KevinComeToHallOfFameText::
+    text "<PLAYER>, please"
+    line "come with me so"
+    cont "we can record"
+    cont "your achievement."
+    
+    prompt
+    
+_KevinGotoJirachiTowerText::
+    text "Hey <PLAYER>!"
+    line "I've heard that"
+    cont "JIRACHI just"
+    cont "woke up."
+    
+    para "He lives in"
+    line "his tower, that's"
+    cont "north of Konbee."
+    
+    para "If you'd like to,"
+    cont "go there to make"
+    cont "a wish!"
+    
+    prompt

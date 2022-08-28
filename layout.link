@@ -48,7 +48,6 @@ ROMX $07
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
-	"Egg Moves"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -77,7 +76,6 @@ ROMX $13
 	"bank13_2"
 ROMX $14
 	"bank14"
-	"Unused Egg Pic"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
@@ -88,6 +86,7 @@ ROMX $18
 	"Map Scripts 4"
 ROMX $19
 	"Crystal Phone Text"
+
 ROMX $1a
 	"Map Scripts 5"
 ROMX $1b
@@ -295,6 +294,8 @@ ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
 	"Pokedex Entries 193-251"
+ROMX $75
+    "Egg Moves"
 ROMX $77
 	"Unown Font"
 	"Print Party"

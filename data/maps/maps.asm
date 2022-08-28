@@ -14,6 +14,11 @@ map: MACRO
 	db \8
 ENDM
 
+MapGroup_Valentine:
+    table_width MAP_LENGTH, MapGroup_Valentine
+    map ValentineForest, TILESET_JOHTO, ROUTE, LANDMARK_VALENTINE_FOREST, MUSIC_ROUTE_30, FALSE, PALETTE_AUTO, FISHGROUP_NONE ;MAPTODO: Replace LANDMARK_GOLDENROD_CITY with custom one (Connecting Route 32 and GOLDENROD)
+    map JosephsHouse, TILESET_TRADITIONAL_HOUSE, INDOOR, LANDMARK_VALENTINE_FOREST, MUSIC_ROUTE_30, FALSE, PALETTE_DAY, FISHGROUP_NONE ;MAPTODO: Replace LANDMARK_GOLDENROD_CITY with custom one (Connecting Route 32 and GOLDENROD)
+
 MapGroupPointers::
 ; pointers to the first map of each map group
 	table_width 2, MapGroupPointers
@@ -45,11 +50,6 @@ MapGroupPointers::
 	dw MapGroup_Cherrygrove ; 26
 	dw MapGroup_Valentine   ; 27
 	assert_table_length NUM_MAP_GROUPS
-
-MapGroup_Valentine:
-    table_width MAP_LENGTH, MapGroup_Valentine
-    map ValentineForest, TILESET_JOHTO, ROUTE, LANDMARK_VALENTINE_FOREST, MUSIC_ROUTE_30, FALSE, PALETTE_AUTO, FISHGROUP_NONE ;MAPTODO: Replace LANDMARK_GOLDENROD_CITY with custom one (Connecting Route 32 and GOLDENROD)
-    map JosephsHouse, TILESET_TRADITIONAL_HOUSE, INDOOR, LANDMARK_VALENTINE_FOREST, MUSIC_ROUTE_30, FALSE, PALETTE_DAY, FISHGROUP_NONE ;MAPTODO: Replace LANDMARK_GOLDENROD_CITY with custom one (Connecting Route 32 and GOLDENROD)
 	
 MapGroup_Olivine:
 	table_width MAP_LENGTH, MapGroup_Olivine

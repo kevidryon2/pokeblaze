@@ -6,7 +6,7 @@ TimeCapsule_CatchRateItems:
 	;db -1, LEFTOVERS ;Comment/Uncomment if any problems 
 	;db GLITCHER, BITTER_BERRY
 	db TIMER_BALL, GOLD_BERRY
-	db ITEM_5A, BERRY
+	db HEX_EDITOR, BERRY
 	db ITEM_64, BERRY
 	db ITEM_78, BERRY
 	db ITEM_87, BERRY

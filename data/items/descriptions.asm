@@ -90,7 +90,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw TeruSama6Desc
+	dw HexEditorDesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -259,6 +259,10 @@ ItemDescriptions:
 	dw TeruSama33Desc
 	assert_table_length $ff
 
+HexEditorDesc:
+    db   "Edits the memory"
+    next "of the game.@"
+	
 MasterBallDesc:
 	db   "The best BALL."
 	next "It never misses.@"

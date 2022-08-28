@@ -121,7 +121,7 @@ ItemEffects:
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
 	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; ITEM_5A
+	dw HexEditorEffect     ; HEX_EDITOR
 	dw NoEffect            ; AMULET_COIN
 	dw NoEffect            ; YLW_APRICORN
 	dw NoEffect            ; GRN_APRICORN
@@ -227,6 +227,60 @@ ItemEffects:
 ; They all have the ITEMMENU_NOUSE attribute so they can't be used anyway.
 ; NoEffect would be appropriate, with the table then being NUM_ITEMS long.
 
+;Convert number B to hex and return 2 characters in BC
+NumberToHex:
+    swap b
+    push af
+    push de
+    ld a, b
+    and %11110000
+    swap a
+    cp $0a
+    jr nc, .letter1
+.number1:
+    add $f6
+    jr .after1
+.letter1:
+    add $80-$0a
+.after1:
+    ld d, a
+    ld a, b
+    and %00001111
+    cp $0a
+    jp nc, .letter2
+.number2:
+    add $f6
+    jr .after2
+.letter2:
+    add $80-$0a
+.after2:
+    ld c, a
+    ld b, d
+    ld d, b
+    ld b, c
+    ld c, d
+    pop de
+    pop af
+    ret
+
+HexEditorEffect:
+    call ClearScreen
+    ld a, $00
+    ld [$dff5], a
+    ld [$dff6], a
+.redrawScreen:
+    call DisableLCD
+    hlcoord 0,1
+    ld a, [$dff5]
+    ld b, a
+    call NumberToHex
+    ld a, b
+    ld [hli], a
+    ld a, c
+    ld [hli], a
+.drawLoopRow:
+    
+
 ;Copy a block of memory from one location to another.
 ;BC: Source
 ;DE: Destination
@@ -242,7 +296,7 @@ Memcpy:
 .check_limit:
     ld a, h
     add l
-    jp z, .end
+    jr z, .end
     jr .loop
 .end:
     pop af
@@ -262,12 +316,6 @@ MusicBoxEffect:
     ld a, $00
     ld b, $08 ;times to do the loop
     ld c, a
-.clearPaletteBg2_loop:
-    ld a, c
-    ld [$ff69], a ;update palette byte
-    ld b, a
-    dec b
-    jp nz, .clearPaletteBg2_loop
 .initMusic:
     ld de, MUSIC_NONE
     call PlayMusic
@@ -301,7 +349,7 @@ MusicBoxEffect:
     cp $02              ;Check if only B is pressed
     jp nz, .loop
 .end:
-    jp DoItemEffect
+    jp RareCandyEffect
 
 PokeBallEffect:
 	ld a, [wBattleMode]
